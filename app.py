@@ -16,7 +16,8 @@ def index():
    mars = mongo.db.mars.find_one()
    return render_template("index.html", mars=mars) 
 
-# The next function will set up our scraping route.
+# The next function will set up our scraping route.This route will be the "button" of the web application, 
+# the one that will scrape updated data when we tell it to from the homepage of our web app
 @app.route("/scrape")
 def scrape():
    mars = mongo.db.mars
